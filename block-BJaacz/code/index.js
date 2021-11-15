@@ -3,36 +3,61 @@
 /*
   Create a function named addTwo which accepts a number, adds 2 to the number and return the new value.
 */
-
+function addTwo(number) {
+  return number + 2
+}
+console.log(addTwo(35));
 /*
   Create a function named addThree which accepts a number, adds 3 to the number and return the new value.
 */
+function addThree(number) {
+  return number + 3
+}
+console.log(addThree(100));
 
 /*
   Create a function named addFive which accepts a number, adds 5 to the number and return the new value.
 */
-
+function addFive(number) {
+  return number + 5
+}
+console.log(addFive(200));
 /*
   Create a function named addTwoToArray which accepts:
     - An array of numbers
     - Returns a new array where 2 is added to each element
     - While doing so use the funciton addTwo
 */
-
+function addTwoToArray(arr,fn) {
+  return function (add) {
+    return arr + addTwo
+  }
+}
+console.log([1,3,4,5,6],addTwo);
 /*
   Create a function named addThreeToArray which accepts:
     - an array of numbers
     - aeturns a new array where 2 is added to each element
     - while doing so use the funciton addThree
 */
-
+function addThreeToArray(arr) {
+  function add(add) {
+    return arr + addThree
+  }
+}
+console.log([2,4,5,7,8],addThree);
 /*
   Create a function named addFiveToArray which accepts:
     - an array of numbers
     - aeturns a new array where 2 is added to each element
     - while doing so use the funciton addThree
 */
-
+function addFiveToArray(arr){
+  function add(add) {
+    return arr + addFive
+  }
+}
+console.log([1,9,6,4,3],addFive);
 /*
 In above function addTwoToArray, addThreeToArray, addFiveToArray we are repeating the code, let's fix this.
 
@@ -113,7 +138,16 @@ const grades = [
     console.log(isAdult(people[1])); // true
     console.log(isAdult(people[2])); // true
 */
-
+function isAdult(obj) {
+  if (isAdult(people.age)>=18) {
+    return true; 
+  } else if (isAdult(people.age)<18) {
+    return false;
+  }
+}
+    console.log(isAdult(people.age[0])); // false
+    console.log(isAdult(people[1])); // true
+    console.log(isAdult(people[2])); // true
 /*
   Create a function named isMale which accepts:
     - an object
