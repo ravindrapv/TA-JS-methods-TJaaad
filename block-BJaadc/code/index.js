@@ -61,3 +61,6 @@ for (const string of message) {
 let messageArray = message.split(" ");
 // Log all the words of messageArray
 console.log(messageArray);
+
+
+
