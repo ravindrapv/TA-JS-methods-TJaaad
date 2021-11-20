@@ -34,6 +34,11 @@ Example:
    - No it does not mutate the original array
 
 2. `join`
+its join a number or an element to the exisiting array
+```js
+let numbers = [1,2,3];
+numbers.join(4)
+```
 3. `flat`
 4. `push`
 5. `indexOf`
