@@ -125,4 +125,6 @@ quote.slice(0,30);
 /*
 21. Find out does quote, from, to starts with "A"
 */
-let q = quote.split("");
+console.log(quote.startsWith("A"));
+console.log(to.startsWith("A"));
+console.log(from.startsWith("A"));
