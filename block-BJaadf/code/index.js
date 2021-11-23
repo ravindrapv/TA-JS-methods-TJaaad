@@ -1,7 +1,7 @@
 let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 
 // Add a new element ('Papaya') into fruits array at end
-fruits.unshift("papaya");
+fruits.pop("papaya");
 console.log(fruits);
 // Remove the last element from fruits array
 fruits.pop();
@@ -18,14 +18,17 @@ fruits.unshift('Guava');
 // Add a new element to the start ('Dragon Fruit') and shift the index of all other to one higher value
 fruits.unshift('Dragon Fruit');
 // Log true or false based on the value at index 0 and 1 is 'Dragon Fruit' and 'Guava' or not
-function cb(fruit){
-    console.log (fruits[0] == ('Dragon Fruit'));
-}
-console.log(fruits.map(cb));
+if(fruits[0] == `Dragon fruit` &&
+   fruits[1] == `Guava`
+  ){
+      console.log(true);
+  } else {
+      console.log(false);
+  };
 // Update the value of index 1 to `Pears`
-fruits.fruits[0] = ["pears"];
+fruits[0] = "pears"
 // Add the 'Kiwi' and 'Lemon' to the index 1 and 2 and shift the other element to next index (use splice to add element)
-fruits.splice(1,2,'Kiwi','Lemon');
+fruits.splice(1,0,"Kiwi","Lemon");
 // Remove (slice) all the element from index 5
 fruits.slice(4,6);
 // Create another array named moreFruits with values ['Berries', 'Melons']
@@ -33,26 +36,34 @@ moreFruits = ['Berries', 'Melons']
 // Concat moreFruits into fruits array (re-assign so the value gets updated)
 fruits.concat(moreFruits);
 // Log the name of all fruit in console
-console.log(fruits);
+fruits.forEach((fruits) =>  console.log(fruits));
 // Convert each fruit name to lowercase and log it
-console.log(fruits[0,1,2,3,4,5].toLowerCase);
+// fruits.forEach((fruit) => 
+// console.log(toLowerCase())
+// );
 // Convert all fruits name into lowercase and store in new array named lowercaseFruits
-let lowercaseFruits = (fruits[0,1,2,3,4,5].toLowerCase);
+// let lowercaseFruits = fruits.map((fruit) =>  
+// fruits.toLowerCase()
+// );
 // Convert all fruits name into uppercase and store in new array named uppercaseFruits
+// fruits.forEach((fruit) => 
+// console.log(toUpperCase())
+// );
+
 
 let numbers = [1, 2, [3, 4]];
 let numbersTwo = [1, 2, [3, 4, [5, 6]]];
 let numbersThree = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 
 // Convert the numbers array to one level element. Remove sub-arrays to individual elements and log them
-numbers.flat[4];
+console.log(numbers.flat(4));
 
 // Convert the numbersTwo array to one level element. Remove all sub-arrays to individual elements and log them.
 // (for multiple level flat accepts argument by default it's 1 `array.flat(2)`)
-numbersTwo.flat[Infinity];
+console.log(numbersTwo.flat(Infinity));
 // Convert the numbersThree array to one level element.
 // Remove all sub-arrays to individual elements, log them and update the value of numbersThree to the new flat array.
-numbersThree.flat[Infinity];
+console.log(numbersThree.flat(Infinity));
 // Use forEach to log all the elements of numberThree array
 numbersThree.forEach(function(element){
     console.log(element);
@@ -85,12 +96,11 @@ console.log(evenNumbers);
 // Find the index of 10 in numbersThree array
 console.log(numbersThree[10]);
 // Reverse the values of numbersThree array
-numbersThree.reverse();
+console.log(numbersThree.reverse());
 // Reverse the values of numbersTwo array
 numbersTwo.reverse();
 // Join all fruits with '-', convert to uppercase and log it
-fruits.join("-");
-fruits.toUpperCase();
+console.log(fruits.join("-").toUpperCase());
+
 // Join all fruits with '&', convert to lowercase and log it
-fruits.join("&");
-fruits.toLowerCase();
+console.log(fruits.join("&").toLowerCase());
