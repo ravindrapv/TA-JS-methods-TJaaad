@@ -16,17 +16,24 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+personsGrade = persons.map((val) => val.grade);
+let grade = personsGrade.reduce((acc,cv) =>  acc+cv);
+console.log(grade/persons.length);
 
 // Find the average grade of male
-
+avgOfmale = persons.map((val)  => val.sex == "M");
+let avgM = avgOfmale.reduce((acc,cv) => acc+cv);
+console.log(avgM/persons.length);
 // Find the average grade of female
-
+avgOffemale = persons.map((val)  => val.sex == "F");
+let avgF = avgOffemale.reduce((acc,cv) => acc+cv);
+console.log(avgF/persons.length);
 // Find the highest grade
-
+console.log(personsGrade.sort((a,b) => a.length - b.length).pop());
 // Find the highest grade in male
-
+avgM.sort((a,b) => a.length - b.length).pop();
 // Find the highest grade in female
-
+avgF.sort((a,b) => a.length - b.length).pop();
 // Find the highest grade for people whose name starts with 'J' or 'P'
 
 const fruitBasket = [
@@ -51,7 +58,7 @@ that fruit has appeared in the array. Store it in new variable fruitsObj
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
-
+let fruitsObj = {...fruitBasket}
 /* 
 
 Use the fruitBasket array to create an array of array. Each array will contain two values name of fruit and number of times
